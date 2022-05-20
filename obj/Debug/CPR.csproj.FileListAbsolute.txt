@@ -1,0 +1,7 @@
+G:\New folder\New folder\CPRed\AttendanceKantipur\obj\Debug\CPR.csprojResolveAssemblyReference.cache
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AttendanceKantipur.dll
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AttendanceKantipur.pdb
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AjaxControlToolkit.dll
+G:\New folder\New folder\CPRed\AttendanceKantipur\obj\Debug\AttendanceKantipur.dll
+G:\New folder\New folder\CPRed\AttendanceKantipur\obj\Debug\AttendanceKantipur.pdb

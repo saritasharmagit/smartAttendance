@@ -1,0 +1,481 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="AttendanceKantipur.User.User" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Avighna Attendance</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../Assets/images/favicon.ico" />
+    <!-- App css -->
+    <link href="../Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Assets/css/core.css" rel="stylesheet" />
+    <link href="../Assets/css/components.css" rel="stylesheet" />
+    <link href="../Assets/css/icons.css" rel="stylesheet" />
+    <link href="../Assets/css/pages.css" rel="stylesheet" />
+    <link href="../Assets/css/menu.css" rel="stylesheet" />
+    <link href="../Assets/css/responsive.css" rel="stylesheet" />
+    <link href="../Assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+    <script src="../Assets/nepaliDatePicker/js/bootstrap.min.js"></script>
+
+    <script src="../Assets/js/modernizr.min.js"></script>
+    <script src="../Assets/js/jquery.min.js"></script>
+    <script src="../Assets/nepaliDatePicker/nepali.datepicker.v2.2.min.js"></script>
+    <link href="../Assets/nepaliDatePicker/nepali.datepicker.v2.2.min.css" rel="stylesheet" />
+
+    <link href="../Assets/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="../Assets/js/bootstrap-datepicker.js"></script>
+
+    <%--for Extra header in report--%>
+    <style type="text/css">
+        .header {
+            font-family: Calibri;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+    <!-- Sweet Alert-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+</head>
+<body class="fixed-left">
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="spinner-wrapper">
+                    <div class="rotator">
+                        <div class="inner-spin"></div>
+                        <div class="inner-spin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Top Bar Start -->
+        <div class="topbar">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="Dashboard.aspx" class="logo"><span>AVIGHNAATTENDANCE</span><i class="mdi mdi-cube"></i></a>
+            </div>
+
+            <!-- Button mobile view to collapse sidebar menu -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Navbar-left -->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <button class="button-menu-mobile open-left waves-effect waves-light">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Right(Notification) -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <%--<li>
+                                <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                                    <i class="mdi mdi-bell"></i>
+                                    <span class="badge up bg-primary">4</span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list">
+                                    <li>
+                                        <h5>Notifications</h5>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="user-list-item">
+                                            <div class="icon bg-info">
+                                                <i class="mdi mdi-account"></i>
+                                            </div>
+                                            <div class="user-desc">
+                                                <span class="name">New Signup</span>
+                                                <span class="time">5 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="user-list-item">
+                                            <div class="icon bg-danger">
+                                                <i class="mdi mdi-comment"></i>
+                                            </div>
+                                            <div class="user-desc">
+                                                <span class="name">New Message received</span>
+                                                <span class="time">1 day ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="user-list-item">
+                                            <div class="icon bg-warning">
+                                                <i class="mdi mdi-settings"></i>
+                                            </div>
+                                            <div class="user-desc">
+                                                <span class="name">Settings</span>
+                                                <span class="time">1 day ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="all-msgs text-center">
+                                        <p class="m-0"><a href="#">See all Notification</a></p>
+                                    </li>
+                                </ul>
+                            </li>--%>
+
+                        <%--<li>
+                                <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                                    <i class="mdi mdi-email"></i>
+                                    <span class="badge up bg-danger">8</span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list">
+                                    <li>
+                                        <h5>Messages</h5>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="user-list-item">
+                                            <div class="avatar">
+                                                <img src="assets/images/users/avatar-2.jpg" alt="">
+                                            </div>
+                                            <div class="user-desc">
+                                                <span class="name">Patricia Beach</span>
+                                                <span class="desc">There are new settings available</span>
+                                                <span class="time">2 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="user-list-item">
+                                            <div class="avatar">
+                                                <img src="assets/images/users/avatar-3.jpg" alt="">
+                                            </div>
+                                            <div class="user-desc">
+                                                <span class="name">Connie Lucas</span>
+                                                <span class="desc">There are new settings available</span>
+                                                <span class="time">2 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="user-list-item">
+                                            <div class="avatar">
+                                                <img src="assets/images/users/avatar-4.jpg" alt="">
+                                            </div>
+                                            <div class="user-desc">
+                                                <span class="name">Margaret Becker</span>
+                                                <span class="desc">There are new settings available</span>
+                                                <span class="time">2 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="all-msgs text-center">
+                                        <p class="m-0"><a href="#">See all Messages</a></p>
+                                    </li>
+                                </ul>
+                            </li>--%>
+
+                        <%--<li>
+                                <a href="javascript:void(0);" class="right-bar-toggle right-menu-item">
+                                    <i class="mdi mdi-settings"></i>
+                                </a>
+                            </li>--%>
+
+                        <li class="dropdown user-box">
+                            <a href="" class="dropdown-toggle waves-effect waves-light user-link" data-toggle="dropdown" aria-expanded="true"/>
+                                <img src="../../Assets/images/users/blank_man1.jpeg" alt="user-img" class="img-circle user-img"/>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
+                                <li>
+                                    <h5>Hi, <asp:Label ID="emp_name" runat="server" Text="Label"></asp:Label></h5>
+                                </li>
+                              <%--  <li><a href="Profile.aspx"><i class="ti-user m-r-5"></i>Profile</a></li>--%>
+                                <li><a href="ChangePassword.aspx"><i class="ti-key m-r-5"></i>Change Password</a></li>
+                                <li><a href="../Logout.aspx"><i class="ti-power-off m-r-5"></i>Logout</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <!-- end navbar-right -->
+
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar -->
+        </div>
+        <!-- Top Bar End -->
+
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <%--<div class="user-details">
+                        <div class="overlay"></div>
+                        <div class="text-center">
+                            <img src="../Assets/images/users/avatar-1.jpg" alt="" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <div>
+                                <a href="#setting-dropdown" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Daniel Syme <span class="mdi mdi-menu-down"></span></a>
+                            </div>
+                        </div>
+                    </div>--%>
+
+                    <%--<div class="dropdown" id="setting-dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)"><i class="mdi mdi-face-profile m-r-5"></i> Profile</a></li>
+                            <li><a href="javascript:void(0)"><i class="mdi mdi-account-settings-variant m-r-5"></i> Settings</a></li>
+                            <li><a href="javascript:void(0)"><i class="mdi mdi-lock m-r-5"></i> Lock screen</a></li>
+                            <li><a href="javascript:void(0)"><i class="mdi mdi-logout m-r-5"></i> Logout</a></li>
+                        </ul>
+                    </div>--%>
+
+                    <ul>
+
+                        <li class="has_sub">
+                            <a href="Dashboard.aspx" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span class="badge badge-success pull-right"></span><span>Dashboard </span></a>
+
+                        </li>
+                          <li class="has_sub">
+                            <a href="Profile.aspx" class="waves-effect"><i class="fa fa-group"></i><span class="badge badge-success pull-right"></span><span>Profile </span></a>
+
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-clock"></i><span>Attendance Mgmt  </span><span class="menu-arrow"></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="LeaveApplication.aspx">Leave Application</a></li>
+                                <li><a href="LeaveCancellation.aspx">Leave Cancellation</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="glyphicon glyphicon-th-list"></i><span>Report </span><span class="menu-arrow"></span></a>
+                            <ul class="list-unstyled">
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">Attendance Reports<span class="menu-arrow"></span></a>
+                                    <ul class="list-unstyled">
+                                        <li><a href="QuickAttendanceReport.aspx">Quick Attendance</a></li>
+                                        <li><a href="MonthlyAttendanceReport.aspx">Monthly Attendance</a></li>
+                                        <%--<li><a href="DatewiseAttendanceReport.aspx">Datewise Attendance</a></li>
+                                        <li><a href="LateAttendanceReport.aspx">Late Attendance</a></li>
+                                        <li><a href="DailyAbsentReport.aspx">Daily Absent</a></li>--%>
+                                    </ul>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">Leave Reports<span class="menu-arrow"></span></a>
+
+                                    <ul class="list-unstyled">
+                                        <li><a href="LeaveInformationReport.aspx">Leave Information</a></li>
+                                        <li><a href="LeaveTakenDetailsReport.aspx">Leave Taken Details</a></li>
+                                    </ul>
+                                </li>
+                                <%--<li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">Employee Info<span class="menu-arrow"></span></a>
+                                    <ul class="list-unstyled">
+                                        <%--<li><a href="Employee.aspx">Employee Report</a></li>
+                                        <li><a href="EmployeeDetailInformationReport.aspx">Employee Detail Info</a></li>
+                                    </ul>
+                                </li>--%>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+                <div class="help-box">
+                    <h5 class="text-muted m-t-0">For Help ?</h5>
+                    <p class="">
+                        <span class="text-dark"><b>Email:</b></span>
+                        <br />
+                        info.avighnatech@gmail.com
+                    </p>
+                    <p class="m-b-0">
+                        <span class="text-dark"><b>Call:</b></span>
+                        <br />
+                        (+977)01-5530337,01-5514041
+                    </p>
+                </div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+            <footer class="footer text-right">
+                2019 @Rasuwagadhi © AvighnaTechnologies Pvt. Ltd.
+            </footer>
+
+        </div>
+
+
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+
+        <!-- Right Sidebar -->
+        <%--<div class="side-bar right-bar">
+                <a href="javascript:void(0);" class="right-bar-toggle">
+                    <i class="mdi mdi-close-circle-outline"></i>
+                </a>
+                <h4 class="">Settings</h4>
+                <div class="setting-list nicescroll">
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">Notifications</h5>
+                            <p class="text-muted m-b-0"><small>Do you need them?</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">API Access</h5>
+                            <p class="m-b-0 text-muted"><small>Enable/Disable access</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">Auto Updates</h5>
+                            <p class="m-b-0 text-muted"><small>Keep up to date</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">Online Status</h5>
+                            <p class="m-b-0 text-muted"><small>Show your status to all</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+                </div>
+            </div>--%>
+        <!-- /Right-bar -->
+
+    </div>
+    <!-- END wrapper -->
+
+
+    <script>
+        $(document).ready(function () {
+            $('.englishDate1').change(function () {
+                var a = $('.englishDate1').val();
+                //console.log(a);
+                //console.log(AD2BS(a));
+                if (a != "") {
+                    $('.nepaliDate1').val(AD2BS($('.englishDate1').val()));
+                }
+            });
+
+            $('.englishDate1').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                currentdate: true,
+                showOnFocus: true,
+                todayHighlight: true
+            });
+
+            $('.nepaliDate1').nepaliDatePicker({
+                npdMonth: true,
+                npdYear: true,
+                npdYearCount: 10,
+                onChange: function () {
+                    var a = $('.nepaliDate1').val();
+                    //console.log(a);
+                    //console.log(BS2AD(a));
+                    $('.englishDate1').val(BS2AD($('.nepaliDate1').val()));
+                }
+            });
+
+
+
+
+            $('.englishDate2').change(function () {
+                var a = $('.englishDate2').val();
+                //console.log(a);
+                //console.log(AD2BS(a));
+                if (a != "") {
+                    $('.nepaliDate2').val(AD2BS($('.englishDate2').val()));
+                }
+            });
+
+            $('.englishDate2').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                currentdate: true,
+                showOnFocus: true,
+                todayHighlight: true
+            });
+
+            $('.nepaliDate2').nepaliDatePicker({
+                npdMonth: true,
+                npdYear: true,
+                npdYearCount: 10,
+                onChange: function () {
+                    var a = $('.nepaliDate2').val();
+                    //console.log(a);
+                    //console.log(BS2AD(a));
+                    $('.englishDate2').val(BS2AD($('.nepaliDate2').val()));
+                }
+            });
+        });
+    </script>
+    <script>
+        var resizefunc = [];
+    </script>
+    <!-- jQuery  -->
+    <script src="../Assets/js/bootstrap.min.js"></script>
+    <script src="../Assets/js/detect.js"></script>
+    <script src="../Assets/js/fastclick.js"></script>
+    <script src="../Assets/js/jquery.blockUI.js"></script>
+    <script src="../Assets/js/waves.js"></script>
+    <script src="../Assets/js/jquery.slimscroll.js"></script>
+    <script src="../Assets/js/jquery.scrollTo.min.js"></script>
+    <script src="../Assets/plugins/switchery/switchery.min.js"></script>
+    <!-- Counter js  -->
+    <script src="../Assets/plugins/counterup/jquery.counterup.min.js"></script>
+    <script src="../Assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <!--Morris Chart-->
+    <script src="../Assets/plugins/morris/morris.min.js"></script>
+    <script src="../Assets/plugins/raphael/raphael-min.js"></script>
+    <!-- Dashboard init -->
+    <script src="../Assets/pages/jquery.dashboard.js"></script>
+    <!-- App js -->
+    <script src="../Assets/js/jquery.core.js"></script>
+    <script src="../Assets/js/jquery.app.js"></script>
+
+</body>
+
+</html>

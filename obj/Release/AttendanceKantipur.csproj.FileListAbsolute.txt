@@ -1,0 +1,12 @@
+C:\Users\sarita\documents\visual studio 2013\Projects\AttendanceKantipur\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+C:\Users\sarita\documents\visual studio 2013\Projects\AttendanceKantipur\AttendanceKantipur\bin\AttendanceKantipur.dll
+C:\Users\sarita\documents\visual studio 2013\Projects\AttendanceKantipur\AttendanceKantipur\bin\AttendanceKantipur.pdb
+C:\Users\sarita\documents\visual studio 2013\Projects\AttendanceKantipur\AttendanceKantipur\obj\Release\AttendanceKantipur.dll
+C:\Users\sarita\documents\visual studio 2013\Projects\AttendanceKantipur\AttendanceKantipur\obj\Release\AttendanceKantipur.pdb
+D:\New folder\AttendanceKantipur\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+D:\New folder\AttendanceKantipur\AttendanceKantipur\bin\AttendanceKantipur.dll
+D:\New folder\AttendanceKantipur\AttendanceKantipur\bin\AttendanceKantipur.pdb
+D:\New folder\AttendanceKantipur\AttendanceKantipur\bin\AjaxControlToolkit.dll
+D:\New folder\AttendanceKantipur\AttendanceKantipur\obj\Release\AttendanceKantipur.dll
+D:\New folder\AttendanceKantipur\AttendanceKantipur\obj\Release\AttendanceKantipur.pdb
+D:\New folder\AttendanceKantipur\AttendanceKantipur\obj\Release\AttendanceKantipur.csprojResolveAssemblyReference.cache

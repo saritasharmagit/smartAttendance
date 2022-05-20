@@ -1,0 +1,35 @@
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AttendanceKantipur.dll
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AttendanceKantipur.pdb
+G:\New folder\New folder\CPRed\AttendanceKantipur\bin\AjaxControlToolkit.dll
+G:\New folder\New folder\CPRed\AttendanceKantipur\obj\Debug\AttendanceKantipur.dll
+G:\New folder\New folder\CPRed\AttendanceKantipur\obj\Debug\AttendanceKantipur.pdb
+G:\New folder\New folder\CPRed\AttendanceKantipur\obj\Debug\CEAPRED.csprojResolveAssemblyReference.cache
+C:\Users\sarita\Desktop\CPRed\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+C:\Users\sarita\Desktop\CPRed\AttendanceKantipur\bin\AttendanceKantipur.dll
+C:\Users\sarita\Desktop\CPRed\AttendanceKantipur\bin\AttendanceKantipur.pdb
+C:\Users\sarita\Desktop\CPRed\AttendanceKantipur\bin\AjaxControlToolkit.dll
+C:\Users\sarita\Desktop\CPRed\AttendanceKantipur\obj\Debug\CEAPRED.csprojResolveAssemblyReference.cache
+C:\Users\sarita\Desktop\CPRed\AttendanceKantipur\obj\Debug\AttendanceKantipur.dll
+C:\Users\sarita\Desktop\CPRed\AttendanceKantipur\obj\Debug\AttendanceKantipur.pdb
+D:\New folder\New folder\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+D:\New folder\New folder\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.dll
+D:\New folder\New folder\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.pdb
+D:\New folder\New folder\CPRed edit\AttendanceKantipur\bin\AjaxControlToolkit.dll
+D:\New folder\New folder\CPRed edit\AttendanceKantipur\obj\Debug\CEAPRED.csprojResolveAssemblyReference.cache
+D:\New folder\New folder\CPRed edit\AttendanceKantipur\obj\Debug\AttendanceKantipur.dll
+D:\New folder\New folder\CPRed edit\AttendanceKantipur\obj\Debug\AttendanceKantipur.pdb
+C:\Users\sarita\Desktop\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+C:\Users\sarita\Desktop\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.dll
+C:\Users\sarita\Desktop\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.pdb
+C:\Users\sarita\Desktop\CPRed edit\AttendanceKantipur\bin\AjaxControlToolkit.dll
+C:\Users\sarita\Desktop\CPRed edit\AttendanceKantipur\obj\Debug\CEAPRED.csprojResolveAssemblyReference.cache
+C:\Users\sarita\Desktop\CPRed edit\AttendanceKantipur\obj\Debug\AttendanceKantipur.dll
+C:\Users\sarita\Desktop\CPRed edit\AttendanceKantipur\obj\Debug\AttendanceKantipur.pdb
+D:\New folder\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.dll.config
+D:\New folder\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.dll
+D:\New folder\CPRed edit\AttendanceKantipur\bin\AttendanceKantipur.pdb
+D:\New folder\CPRed edit\AttendanceKantipur\bin\AjaxControlToolkit.dll
+D:\New folder\CPRed edit\AttendanceKantipur\obj\Debug\CEAPRED.csprojResolveAssemblyReference.cache
+D:\New folder\CPRed edit\AttendanceKantipur\obj\Debug\AttendanceKantipur.dll
+D:\New folder\CPRed edit\AttendanceKantipur\obj\Debug\AttendanceKantipur.pdb
